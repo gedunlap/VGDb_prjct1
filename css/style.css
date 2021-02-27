@@ -44,7 +44,6 @@ div {
 .titleimg{
     background-color: black;
     grid-area: img;
-    color: white;
 }
 
 .year{
@@ -54,7 +53,8 @@ div {
 
 .desc {
     background-color: blue;
-    grid-area: five
+    grid-area: five;
+    color: white;
 }
 
 .meta {

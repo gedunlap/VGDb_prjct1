@@ -1,5 +1,5 @@
-const $title = $('#name')
-const $desc = $('#desc')
+const $title = $('.title')
+const $desc = $('.desc')
 const $input = $('input[type="text"]')
 
 let gameData, userInput;
@@ -18,10 +18,16 @@ function handleGetData(event) {
     }).then(
         (data) => {
             gameData = data;
+            render();
             console.log(data);
         },
         (error) => {
             console.log(`That's not quite right: `, error);
         }
     )
+}
+
+function render() {
+    $title.text(gameData.name);
+    $desc.text(gameData.description_raw);
 }
