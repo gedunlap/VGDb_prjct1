@@ -31,9 +31,10 @@ function handleGetData(event) {
             console.log(`That's not quite right: `, error);
         }
     );
-
-    // $('.titleimg').html('<img src="https://media.rawg.io/media/games/0bc/0bcc108295a244b488d5c25f7d867220.jpg"');
 }
+
+$('.titleimg').html('<img src="https://media.rawg.io/media/games/0bc/0bcc108295a244b488d5c25f7d867220.jpg"');
+
 
 const $similar0 = $('.similar0');
 const $similar1 = $('.similar1');
