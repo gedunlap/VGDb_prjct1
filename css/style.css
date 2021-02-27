@@ -46,7 +46,7 @@ div {
     grid-area: img;
 }
 
-.year{
+.date{
     background-color: red;
     grid-area: four;
 }

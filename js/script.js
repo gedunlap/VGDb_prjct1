@@ -1,5 +1,9 @@
+const $titleimg = $('.titleimg')
 const $title = $('.title')
 const $desc = $('.desc')
+const $date = $('.date')
+const $meta = $('.meta')
+const $review = $('.review')
 const $input = $('input[type="text"]')
 
 let gameData, userInput;
@@ -27,7 +31,11 @@ function handleGetData(event) {
     )
 }
 
+
 function render() {
     $title.text(gameData.name);
     $desc.text(gameData.description_raw);
+    $date.text(gameData.released);
+    $meta.text(gameData.metacritic);
+    $review.text(gameData.rating);
 }
