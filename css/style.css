@@ -3,7 +3,69 @@
     margin: 0;
 }
 
+h1 {
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: solid black 2px;
+    border-radius: 30px;
+}
+
 body {
     display: flex;
     min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
+
+div {
+    width: 50px;
+    height: 50px;
+    border: solid black;
+}
+
+.title {
+    background-color: aqua;
+}
+
+.year{
+    background-color: red;
+}
+
+.desc {
+    background-color: blue;
+}
+
+.meta {
+    background-color: yellow;
+}
+
+.review{
+    background-color: teal;
+}
+
+#moregames {
+    max-height: 30%;
+    color: red;
+}
+
+.similar0{
+    background-color: grey;
+}
+
+.similar1{
+    background-color: hotpink;
+}
+
+.similar2{
+    background-color: indigo;
+}
+
+.similar3{
+    background-color: orange;
+}
+
+.similar4{
+    background-color: paleturquoise;
+}
+
