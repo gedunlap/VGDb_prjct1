@@ -2,6 +2,8 @@ const $title = $('#name')
 const $desc = $('#desc')
 const $input = $('input[type="text"]')
 
+let gameData, userInput;
+
 $('form').on('submit', handleGetData);
 
 function handleGetData(event) {
@@ -13,5 +15,13 @@ function handleGetData(event) {
 
     $.ajax({
         url:'https://api.rawg.io/api/games/' + userInput
-    }).then({})
+    }).then(
+        (data) => {
+            gameData = data;
+            console.log(data);
+        },
+        (error) => {
+            console.log(`That's not quite right: `, error);
+        }
+    )
 }
