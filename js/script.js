@@ -8,6 +8,8 @@ const $input = $('input[type="text"]')
 
 let gameData, userInput;
 
+
+
 $('form').on('submit', handleGetData);
 
 function handleGetData(event) {
@@ -37,7 +39,19 @@ $('button').on('click', handleGetData2);
 
 function handleGetData2(event) {
     event.preventDefault();
-    
+
+    $.ajax({
+        url:'https://api.rawg.io/api/games/' + userInput + '/suggested?page_size=5'
+    }).then(
+        (data) =>{
+            newGameData = data;
+            render2()
+            console.log(data);
+        },
+        (error) => {
+            console.log('WHOOPS: ', error)
+        }
+    );
 }
 
 function render() {
