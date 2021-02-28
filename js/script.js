@@ -63,8 +63,8 @@ function handleGetData2(event) {
 
 function render() {
     $titleimg.text(gameData.background_image);
-    $title.text(gameData.name);
-    $desc.text(gameData.description_raw);
+    $title.text("Title: " + gameData.name);
+    $desc.text("Description: " + gameData.description_raw);
     $date.text(gameData.released);
     $meta.text(gameData.metacritic);
     $review.text(gameData.rating);

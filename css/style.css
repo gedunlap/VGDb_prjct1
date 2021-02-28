@@ -3,7 +3,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border: dotted;
+    border: solid 5px;
+    border-radius: 5px;
+    background-color: gray;
 }
 
 .icon {
@@ -11,13 +13,17 @@
     background-color: teal;
     color: white;
     border-radius: 30px;
-    margin: 20px;
+    margin-left: 50px;
     padding: 10px;
 
 }
 
 form{
     margin-right: 50px;
+}
+
+input[type=text] {
+    width: 100px;
 }
 
 .container {
@@ -36,12 +42,14 @@ form{
     "sim3"
     "sim4";
     width: 100px;
+    grid-gap: 10px;
 
 }
 
 .container div {
     height: 100%;
     width: 100%;
+    grid-gap: 10rem;
 }
 
 .title1 {
@@ -72,6 +80,9 @@ form{
 }
 
 .desc {
+    display: flex;
+    text-align: center;
+    align-items: center;
     background-color: blue;
     color: white;
     grid-area: desc;
@@ -155,9 +166,9 @@ form{
         display: grid;
         grid-template-areas: 
         "img img img img img"
-        "title desc desc desc desc"
-        "title desc desc desc desc"
-        "date desc desc desc desc"
+        "title title desc desc desc"
+        "title title desc desc desc"
+        "date date desc desc desc"
         "meta meta meta review review"
         "button button button button button"
         "sim0 sim1 sim2 sim3 sim4";
