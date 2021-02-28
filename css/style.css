@@ -1,111 +1,172 @@
-.logobar{
+.logobar {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    background-color: lightgray;
+    border: dotted;
 }
 
-.logobar p{
-    border: solid blue;
-    font-weight: bold;
-}
-
-h1 {
-    width:90px;
+.icon {
+    border: solid black;
     background-color: teal;
     color: white;
-    padding: 10px;
-    border: solid black 2px;
     border-radius: 30px;
+    margin: 20px;
+    padding: 10px;
+
 }
 
-form {
-    justify-items: center;
-    align-items: center;
+form{
+    margin-right: 50px;
 }
 
 .container {
     display: grid;
-    grid-template-areas:
-    "img img img img img"
-    "three three four four four"
-    "five five five five five"
-    "six six seven seven seven"
-    "eight eight eight eight eight"
-    "nine ten eleven twelve thirteen";
-    column-gap: 10px;
-    row-gap: 10px;
-    background-color: lightgray;
-    justify-items: center;
-    text-align: center;
+    grid-template-areas: 
+    "img"
+    "title"
+    "date"
+    "desc"
+    "meta"
+    "review"
+    "button"
+    "sim0"
+    "sim1"
+    "sim2"
+    "sim3"
+    "sim4";
+    justify-content: center;
+    width: 400px;
+    height:1000px
     margin: auto;
+
 }
 
-div {
-    width: 100%;
+.container div {
     height: 100%;
+    width: 100%;
+}
+
+.title1 {
+    grid-area: title;
+    color: white;
 }
 
 .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: aqua;
-    grid-area: three;
+    grid-area: title;
 }
 
 .titleimg{
     background-color: black;
-    grid-area: img;
     color: white;
+    grid-area: img;
 }
 
 .date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: red;
-    grid-area: four;
+    grid-area: date;
 }
 
 .desc {
     background-color: blue;
-    grid-area: five;
     color: white;
+    grid-area: desc;
 }
 
 .meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: yellow;
-    grid-area: six;
+    grid-area: meta;
 }
 
 .review{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: teal;
-    grid-area: seven;
+    grid-area: review;
 }
 
 #moregames {
-    height: 100%;
+    height:30px;
+    width: 100px;
     color: red;
-    grid-area: eight;
+    grid-area: button;
 }
 
 .similar0{
     background-color: grey;
-    grid-area: nine;
+    grid-area: sim0;
 }
 
 .similar1{
     background-color: hotpink;
-    grid-area: ten;
+    grid-area: sim1;
 }
 
 .similar2{
     background-color: indigo;
-    grid-area: eleven;
+    grid-area: sim2;
 }
 
 .similar3{
     background-color: orange;
-    grid-area: twelve;
+    grid-area: sim3;
 }
 
 .similar4{
     background-color: paleturquoise;
-    grid-area: thirteen;
+    grid-area: sim4;
 }
 
+/* ***************************
+** Tablet Media Query
+*************************** */
+
+@media screen and (min-width: 480px){
+    .container {
+      display: grid;
+      grid-template-areas:
+      "img img img"
+      "title title date"
+      "desc desc desc"
+      "met meta review"
+      "button button button"
+      "sim0 sim1 sim2"
+      "sim3 sim4 sim5";
+      width: 100%;
+      height: 100vh;
+      margin: auto;
+    }
+  }
+  
+  /* ***************************
+  ** Desktop Media Query
+  *************************** */
+  
+  @media screen and (min-width: 769px){
+    .container {
+        display: grid;
+        grid-template-areas: 
+        "img img img img img"
+        "title desc desc desc desc"
+        "title desc desc desc desc"
+        "date desc desc desc desc"
+        "meta meta meta review review"
+        "button button button button button"
+        "sim0 sim1 sim2 sim3 sim4";
+        justify-items: center;
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+    }
+  }
