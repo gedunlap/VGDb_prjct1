@@ -70,6 +70,13 @@ input[type='submit']{
 .container2 {
     background-color: lightpink;
 }
+
+#similar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px 0 50px;
+    color: blue;
+}
 /* 
 .container {
     display: grid;

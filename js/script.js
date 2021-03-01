@@ -32,12 +32,6 @@ function handleGetData(event) {
 }
 
 
-const $similar0 = $('.similar0');
-const $similar1 = $('.similar1');
-const $similar2 = $('.similar2');
-const $similar3 = $('.similar3');
-const $similar4 = $('.similar4');
-
 $('button').on('click', handleGetData2);
 
 function handleGetData2(event) {
@@ -55,6 +49,9 @@ function handleGetData2(event) {
             console.log('WHOOPS: ', error)
         }
     );
+
+    $('#similar').remove();
+
 }
 
 
@@ -65,22 +62,19 @@ function render() {
     $date.text(gameData.released);
     $meta.text(gameData.metacritic);
     $review.text(gameData.rating);
-    // $similar0.text(newGameData.results[0].name);
-    // $similar1.text(newGameData.results[1].name);
-    // $similar2.text(newGameData.results[2].name);
-    // $similar3.text(newGameData.results[3].name);
-    // $similar4.text(newGameData.results[4].name);
 }
 
 function render2() {
+
     $.each(newGameData.results, function(index, item) {
-        $('.container2').append('<li>' + item.name + '</li>');
-    })
+        $('#similar').append('<li>' + item.name + '</li>');
+    });
 }
-// function render2() {
-//     $similar0.text(newGameData.results[0].name);
-//     $similar1.text(newGameData.results[1].name);
-//     $similar2.text(newGameData.results[2].name);
-//     $similar3.text(newGameData.results[3].name);
-//     $similar4.text(newGameData.results[4].name);
+
+// $('li').on('click','li', loadGame);
+
+// function loadGame(event) {
+//     alert($(this).text());
 // }
+
+// $('#similar').remove('<li>' + item.name + '</li>')
