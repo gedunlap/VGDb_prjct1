@@ -1,4 +1,3 @@
-const $titleimg = $('.titleimg')
 const $title = $('.title')
 const $desc = $('.desc')
 const $date = $('.date')
@@ -7,7 +6,6 @@ const $review = $('.review')
 const $input = $('input[type="text"]')
 
 let gameData, newGameData, userInput;
-
 
 
 $('form').on('submit', handleGetData);
@@ -33,8 +31,6 @@ function handleGetData(event) {
     );
 }
 
-$('.titleimg').html('<img src="https://media.rawg.io/media/games/0bc/0bcc108295a244b488d5c25f7d867220.jpg"');
-
 
 const $similar0 = $('.similar0');
 const $similar1 = $('.similar1');
@@ -53,7 +49,7 @@ function handleGetData2(event) {
         (data) =>{
             newGameData = data;
             console.log(data);
-            render();
+            render2();
         },
         (error) => {
             console.log('WHOOPS: ', error)
@@ -61,17 +57,26 @@ function handleGetData2(event) {
     );
 }
 
+
 function render() {
-    $titleimg.text(gameData.background_image);
-    $title.text("Title: " + gameData.name);
-    $desc.text("Description: " + gameData.description_raw);
+    $(".gameimg").attr("src", gameData.background_image);
+    $title.text(gameData.name);
+    $desc.text(gameData.description_raw);
     $date.text(gameData.released);
     $meta.text(gameData.metacritic);
     $review.text(gameData.rating);
+    // $similar0.text(newGameData.results[0].name);
+    // $similar1.text(newGameData.results[1].name);
+    // $similar2.text(newGameData.results[2].name);
+    // $similar3.text(newGameData.results[3].name);
+    // $similar4.text(newGameData.results[4].name);
+}
+
+
+function render2() {
     $similar0.text(newGameData.results[0].name);
     $similar1.text(newGameData.results[1].name);
     $similar2.text(newGameData.results[2].name);
     $similar3.text(newGameData.results[3].name);
     $similar4.text(newGameData.results[4].name);
 }
-
