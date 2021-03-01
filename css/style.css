@@ -1,17 +1,28 @@
+body {
+    background-image: url('https://wallpaperaccess.com/full/240639.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    background-color: #cccccc;
+}
+
 .logobar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border: solid 5px;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/199/775/773/neon-4k-8k-geometric-wallpaper-thumb.jpg');
+    border: solid white 5px;
     border-radius: 5px;
-    background-color: gray;
+    margin-bottom: 30px;
 }
 
 .icon {
-    border: solid black;
-    background-color: teal;
-    color: white;
+    border: solid white;
+    background-color: rgb(9, 199, 199);
+    color: black;
+    font-weight: bold;
     border-radius: 30px;
     margin-left: 50px;
     padding: 10px;
@@ -22,10 +33,44 @@ form{
     margin-right: 50px;
 }
 
-input[type=text] {
-    width: 100px;
+.game{
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
 }
 
+input[type='text'] {
+    background-color: white;
+    border-radius: 10px;
+}
+
+input[type='submit']{
+    width: 100px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container1 {
+    background-color: lightgoldenrodyellow;
+}
+
+.gameimg {
+    max-width: 800px;
+    max-height: 500px;
+    border: solid white 5px;
+    border-radius: 50px;
+}
+
+#dynamic {
+    width: 800px;
+    justify-items: center;
+    border-radius: 50px;
+}
+
+.container2 {
+    background-color: lightpink;
+}
+/* 
 .container {
     display: grid;
     grid-template-areas: 
@@ -41,7 +86,7 @@ input[type=text] {
     "sim2"
     "sim3"
     "sim4";
-    width: 100px;
+    width: 400px;
     grid-gap: 10px;
 
 }
@@ -140,7 +185,7 @@ input[type=text] {
 ** Tablet Media Query
 *************************** */
 
-@media screen and (min-width: 480px){
+/* @media screen and (min-width: 480px){
     .container {
       display: grid;
       grid-template-areas:
@@ -151,17 +196,18 @@ input[type=text] {
       "button button button"
       "sim0 sim1 sim2"
       "sim3 sim4 sim5";
+      text-align: center;
       width: 100%;
       height: 100vh;
       margin: auto;
     }
-  }
+  } */
   
   /* ***************************
   ** Desktop Media Query
   *************************** */
   
-  @media screen and (min-width: 769px){
+  /* @media screen and (min-width: 769px){
     .container {
         display: grid;
         grid-template-areas: 
@@ -172,9 +218,9 @@ input[type=text] {
         "meta meta meta review review"
         "button button button button button"
         "sim0 sim1 sim2 sim3 sim4";
-        justify-items: center;
+        text-align: center;
         width: 100%;
         height: 100vh;
         margin: auto;
     }
-  }
+  } */
