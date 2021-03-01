@@ -72,11 +72,15 @@ function render() {
     // $similar4.text(newGameData.results[4].name);
 }
 
-
 function render2() {
-    $similar0.text(newGameData.results[0].name);
-    $similar1.text(newGameData.results[1].name);
-    $similar2.text(newGameData.results[2].name);
-    $similar3.text(newGameData.results[3].name);
-    $similar4.text(newGameData.results[4].name);
+    $.each(newGameData.results, function(index, item) {
+        $('.container2').append('<li>' + item.name + '</li>');
+    })
 }
+// function render2() {
+//     $similar0.text(newGameData.results[0].name);
+//     $similar1.text(newGameData.results[1].name);
+//     $similar2.text(newGameData.results[2].name);
+//     $similar3.text(newGameData.results[3].name);
+//     $similar4.text(newGameData.results[4].name);
+// }
