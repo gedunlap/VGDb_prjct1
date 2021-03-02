@@ -1,3 +1,5 @@
+
+
 const $title = $('.title')
 const $desc = $('.desc')
 const $date = $('.date')
@@ -12,8 +14,8 @@ $('form').on('submit', handleGetData);
 
 function handleGetData(event) {
     event.preventDefault();
-
-    userInput = $input.val().replace(/ /g, '-');
+    
+    userInput = $input.val().replace(/[':]/g, '').replace(/ /g, '-');
 
     console.log(userInput);
 
@@ -35,6 +37,8 @@ function handleGetData(event) {
 $('button').on('click', handleGetData2);
 
 function handleGetData2(event) {
+    $('#similar').empty();
+
     event.preventDefault();
 
     $.ajax({
@@ -50,9 +54,9 @@ function handleGetData2(event) {
         }
     );
 
-    $('#similar').remove();
 
 }
+
 
 
 function render() {
@@ -71,10 +75,22 @@ function render2() {
     });
 }
 
-// $('li').on('click','li', loadGame);
 
-// function loadGame(event) {
-//     alert($(this).text());
-// }
+$("#similar").on('click','li',function (){
+    var gameSearch = $(this).text().replace(/[':]/g, '').replace(/ /g, '-');
 
-// $('#similar').remove('<li>' + item.name + '</li>')
+    console.log(gameSearch)
+
+    $.ajax({
+        url:'https://api.rawg.io/api/games/' + gameSearch
+    }).then(
+        (data) => {
+            gameData = data;
+            render();
+            console.log(data);
+        },
+        (error) => {
+            console.log(`That's not quite right: `, error);
+        }
+    );
+});
