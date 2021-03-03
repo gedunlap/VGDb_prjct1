@@ -14,13 +14,13 @@ body {
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
     background-image: url('https://c4.wallpaperflare.com/wallpaper/199/775/773/neon-4k-8k-geometric-wallpaper-thumb.jpg');
-    border: solid white 5px;
+    border: solid whitesmoke 5px;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
 .icon {
-    border: solid white;
+    border: solid whitesmoke;
     background-color: rgb(9, 199, 199);
     color: black;
     border-radius: 30px;
@@ -56,12 +56,13 @@ input[type='submit']{
 .container1 {
     display: grid;
     flex-wrap: wrap;
-    align-items: center;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+    grid-gap: 20px;
     grid-template-areas: 
     "img img img"
+    "head1 head2 head3"
     "title date meta"
     "desc desc desc";
     font-family: 'Courier New', Courier, monospace;
@@ -71,30 +72,68 @@ input[type='submit']{
     grid-area: img;
     height: auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
+    border: solid whitesmoke 5px;
+    border-radius: 50px;
+}
+
+.title1, .date1, .meta1 {
+    grid-area: head1;
+    font-weight: bolder;
+    font-size: 30px;
+    border: solid whitesmoke 2px; 
+    border-radius: 30px;
+    background-color: rgb(9, 199, 199);
+    padding: 10px;
+    color: black;
+}
+
+.title, .date, .meta {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
 }
 
 .title {
     grid-area: title;
     min-height: 100px;
-    text-align: center;
-    align-items: center;
+}
+
+.date1 {
+    grid-area: head2;
 }
 
 .date {
     grid-area: date;
     min-height: 100px;
-    text-align: center;
+}
+
+.meta1 {
+    grid-area: head3;
 }
 
 .meta {
+    display: flex;
     grid-area: meta;
     min-height: 100px;
-    text-align: center;
+    width: 100px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Gold_square.svg/1024px-Gold_square.svg.png);
+    background-color: gold;
+    border-radius: 20px;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
 }
+
+
 
 .desc {
     grid-area: desc;
+    border: solid white 2px;
+    min-width: 1000px;
+    min-height: 100px;
+    padding: 10px;
 }
 
 #similar {
