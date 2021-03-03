@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     background-size: auto;
     background-color: #cccccc;
+    color: white;
 }
 
 .logobar {
@@ -15,14 +16,13 @@ body {
     background-image: url('https://c4.wallpaperflare.com/wallpaper/199/775/773/neon-4k-8k-geometric-wallpaper-thumb.jpg');
     border: solid white 5px;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .icon {
     border: solid white;
     background-color: rgb(9, 199, 199);
     color: black;
-    font-weight: bold;
     border-radius: 30px;
     margin-left: 50px;
     padding: 10px;
@@ -31,17 +31,20 @@ body {
 
 form{
     margin-right: 50px;
+    /* display: flex; */
 }
 
 .game{
     font-weight: bold;
     text-decoration: underline;
+    text-size-adjust: auto;
     color: white;
 }
 
 input[type='text'] {
     background-color: white;
     border-radius: 10px;
+    /* display: flex; */
 }
 
 input[type='submit']{
@@ -51,24 +54,47 @@ input[type='submit']{
 }
 
 .container1 {
-    background-color: lightgoldenrodyellow;
+    display: grid;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "img img img"
+    "title date meta"
+    "desc desc desc";
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .gameimg {
+    grid-area: img;
+    height: auto;
+    width: 100%;
     max-width: 800px;
-    max-height: 500px;
-    border: solid white 5px;
-    border-radius: 50px;
 }
 
-#dynamic {
-    width: 800px;
-    justify-items: center;
-    border-radius: 50px;
+.title {
+    grid-area: title;
+    min-height: 100px;
+    text-align: center;
+    align-items: center;
 }
 
-.container2 {
-    background-color: lightpink;
+.date {
+    grid-area: date;
+    min-height: 100px;
+    text-align: center;
+}
+
+.meta {
+    grid-area: meta;
+    min-height: 100px;
+    text-align: center;
+}
+
+.desc {
+    grid-area: desc;
 }
 
 #similar {
@@ -78,116 +104,7 @@ input[type='submit']{
     margin: 0 50px 0 50px;
     color: blue;
 }
-/* 
-.container {
-    display: grid;
-    grid-template-areas: 
-    "img"
-    "title"
-    "date"
-    "desc"
-    "meta"
-    "review"
-    "button"
-    "sim0"
-    "sim1"
-    "sim2"
-    "sim3"
-    "sim4";
-    width: 400px;
-    grid-gap: 10px;
 
-}
-
-.container div {
-    height: 100%;
-    width: 100%;
-    grid-gap: 10rem;
-}
-
-.title1 {
-    grid-area: title;
-    color: white;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
-    grid-area: title;
-}
-
-.titleimg{
-    background-color: black;
-    color: white;
-    grid-area: img;
-}
-
-.date{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-    grid-area: date;
-}
-
-.desc {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    background-color: blue;
-    color: white;
-    grid-area: desc;
-}
-
-.meta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: yellow;
-    grid-area: meta;
-}
-
-.review{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: teal;
-    grid-area: review;
-}
-
-#moregames {
-    height:30px;
-    width: 100px;
-    color: red;
-    grid-area: button;
-}
-
-.similar0{
-    background-color: grey;
-    grid-area: sim0;
-}
-
-.similar1{
-    background-color: hotpink;
-    grid-area: sim1;
-}
-
-.similar2{
-    background-color: indigo;
-    grid-area: sim2;
-}
-
-.similar3{
-    background-color: orange;
-    grid-area: sim3;
-}
-
-.similar4{
-    background-color: paleturquoise;
-    grid-area: sim4;
-}
 
 /* ***************************
 ** Tablet Media Query
