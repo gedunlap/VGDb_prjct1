@@ -8,6 +8,9 @@ const $input = $('input[type="text"]')
 
 let gameData, newGameData, userInput;
 
+$('.icon').click(function(){
+    location.reload();
+});
 
 $('form').on('submit', handleGetData);
 
