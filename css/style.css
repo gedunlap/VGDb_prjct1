@@ -126,8 +126,6 @@ input[type='submit']{
     color: black;
 }
 
-
-
 .desc {
     grid-area: desc;
     border: solid white 2px;
@@ -136,12 +134,37 @@ input[type='submit']{
     padding: 10px;
 }
 
+.container2 {
+    display: grid;
+    flex-wrap: wrap;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    height: 100px;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "sim sim btn"
+    "ul ul ul";
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.similargames {
+    grid-area: sim;
+}
+
+#moregames {
+    grid-area: btn;
+    width: 100px;
+
+}
+
 #similar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 50px 0 50px;
+    width: 100%;
     color: blue;
+    grid-area: ul;
 }
 
 
