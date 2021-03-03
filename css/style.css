@@ -30,41 +30,65 @@ body {
 }
 
 form{
+    display: flex;
     margin-right: 50px;
-    /* display: flex; */
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    min-width: 290px;
+    margin-bottom: 10px;
 }
 
 .game{
     font-weight: bold;
-    text-decoration: underline;
-    text-size-adjust: auto;
+    text-decoration: underline black;
+    font-size: 25px;
     color: white;
 }
 
+input {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: solid 3px;
+}
+
 input[type='text'] {
-    background-color: white;
-    border-radius: 10px;
-    /* display: flex; */
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+::placeholder{
+    color: white;
 }
 
 input[type='submit']{
-    width: 100px;
-    background-color: white;
-    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    background-color: lightgray;
 }
 
 .container1 {
     display: grid;
     flex-wrap: wrap;
     justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 20px;
     grid-template-areas: 
-    "img img img"
-    "head1 head2 head3"
-    "title date meta"
-    "desc desc desc";
+    "img"
+    "head1" 
+    "title" 
+    "head2" 
+    "date" 
+    "head3"
+    "meta"
+    "desc" 
+    "btn"
+    "ul";
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -92,6 +116,7 @@ input[type='submit']{
     font-size: 25px;
     display: flex;
     align-items: center;
+    text-align: center ;
 }
 
 .title {
@@ -106,6 +131,7 @@ input[type='submit']{
 .date {
     grid-area: date;
     min-height: 100px;
+    text-align: center;
 }
 
 .meta1 {
@@ -127,44 +153,26 @@ input[type='submit']{
 }
 
 .desc {
+    display: flex;
     grid-area: desc;
-    border: solid white 2px;
-    min-width: 1000px;
-    min-height: 100px;
     padding: 10px;
 }
 
-.container2 {
-    display: grid;
-    flex-wrap: wrap;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    height: 100px;
-    grid-gap: 20px;
-    grid-template-areas: 
-    "sim sim btn"
-    "ul ul ul";
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.similargames {
-    grid-area: sim;
-}
-
 #moregames {
+    display: flex;
     grid-area: btn;
-    width: 100px;
-
 }
 
 #similar {
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 200px;
     width: 100%;
-    color: blue;
+    color: white;
     grid-area: ul;
+    padding: 0;
 }
 
 
@@ -172,42 +180,44 @@ input[type='submit']{
 ** Tablet Media Query
 *************************** */
 
-/* @media screen and (min-width: 480px){
-    .container {
-      display: grid;
-      grid-template-areas:
-      "img img img"
-      "title title date"
-      "desc desc desc"
-      "met meta review"
-      "button button button"
-      "sim0 sim1 sim2"
-      "sim3 sim4 sim5";
-      text-align: center;
-      width: 100%;
-      height: 100vh;
-      margin: auto;
+@media screen and (min-width: 480px){
+    .container1 {
+        display: grid;
+        flex-wrap: wrap;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+        grid-template-areas: 
+        "img img img"
+        "head1 head2 head3"
+        "title date meta"
+        "desc desc desc"
+        "btn btn btn"
+        "ul ul ul";
+        font-family: 'Courier New', Courier, monospace;
     }
-  } */
+  }
   
   /* ***************************
   ** Desktop Media Query
   *************************** */
   
-  /* @media screen and (min-width: 769px){
-    .container {
+  @media screen and (min-width: 480px){
+    .container1 {
         display: grid;
+        flex-wrap: wrap;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
         grid-template-areas: 
-        "img img img img img"
-        "title title desc desc desc"
-        "title title desc desc desc"
-        "date date desc desc desc"
-        "meta meta meta review review"
-        "button button button button button"
-        "sim0 sim1 sim2 sim3 sim4";
-        text-align: center;
-        width: 100%;
-        height: 100vh;
-        margin: auto;
+        "img img img"
+        "head1 head2 head3"
+        "title date meta"
+        "desc desc desc"
+        "btn btn btn"
+        "ul ul ul";
+        font-family: 'Courier New', Courier, monospace;
     }
-  } */
+  }

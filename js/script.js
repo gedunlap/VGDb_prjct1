@@ -48,7 +48,7 @@ $('button').on('click', handleGetData2);
 
 function handleGetData2(event) {
     $('#similar').empty();
-
+    $('#similar').html('Click title to see info');
     event.preventDefault();
 
     $.ajax({
@@ -103,6 +103,7 @@ $("#similar").on('click','li',function (){
         }
     );
 });
+
 
 // function redirect() {
 //     if(gameData.redirect == true){
