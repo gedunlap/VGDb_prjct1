@@ -13,9 +13,11 @@ let gameData, newGameData, userInput;
 $('form').on('submit', handleGetData);
 
 function handleGetData(event) {
-    event.preventDefault();
+    $('#similar').empty();
+
+    event && event.preventDefault();
     
-    userInput = $input.val().replace(/[':]/g, '').replace(/ /g, '-');
+    userInput = $input.val().replace(/['’:]/g, '').replace(/ /g, '-');
 
     console.log(userInput);
 
@@ -23,9 +25,15 @@ function handleGetData(event) {
         url:'https://api.rawg.io/api/games/' + userInput
     }).then(
         (data) => {
-            gameData = data;
-            render();
-            console.log(data);
+            console.log(data.redirect);
+            if(data.hasOwnProperty("redirect")) {
+               $input.val(data.slug);
+               handleGetData();  
+            } else {
+                gameData = data;
+                render();
+                console.log(data);
+            }
         },
         (error) => {
             console.log(`That's not quite right: `, error);
@@ -77,7 +85,7 @@ function render2() {
 
 
 $("#similar").on('click','li',function (){
-    var gameSearch = $(this).text().replace(/[':]/g, '').replace(/ /g, '-');
+    var gameSearch = $(this).text().replace(/['’:]/g, '').replace(/ /g, '-');
 
     console.log(gameSearch)
 
@@ -94,3 +102,21 @@ $("#similar").on('click','li',function (){
         }
     );
 });
+
+// function redirect() {
+//     if(gameData.redirect == true){
+//         userInput == gameData.slug;
+//         $.ajax({
+//             url:'https://api.rawg.io/api/games/' + userInput + '/suggested?page_size=5'
+//         }).then(
+//             (data) =>{
+//                 newGameData = data;
+//                 console.log(data);
+//                 render2();
+//             },
+//             (error) => {
+//                 console.log('WHOOPS: ', error)
+//             }
+//         );
+//     }
+// }
