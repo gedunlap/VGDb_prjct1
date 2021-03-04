@@ -35,7 +35,7 @@ form{
     align-items: center;
     flex-direction: row;
     width: 50%;
-    min-width: 290px;
+    min-width: 280px;
     margin-bottom: 10px;
 }
 
@@ -87,6 +87,7 @@ input[type='submit']{
     "head3"
     "meta"
     "desc" 
+    "meta2"
     "btn"
     "ul";
     font-family: 'Courier New', Courier, monospace;
@@ -97,7 +98,7 @@ input[type='submit']{
     height: auto;
     width: 100%;
     max-width: 1000px;
-    border: solid whitesmoke 5px;
+    /* border: solid whitesmoke 5px; */
     border-radius: 50px;
 }
 
@@ -107,13 +108,15 @@ input[type='submit']{
     font-size: 30px;
     border: solid whitesmoke 2px; 
     border-radius: 30px;
-    background-color: rgb(9, 199, 199);
+    background-color: rgb(9, 199, 199, 0.7);
     padding: 10px;
     color: black;
 }
 
 .title, .date, .meta {
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline rgb(9, 199, 199);
     display: flex;
     align-items: center;
     text-align: center ;
@@ -142,12 +145,14 @@ input[type='submit']{
     display: flex;
     grid-area: meta;
     min-height: 100px;
+    text-decoration: none;
     width: 100px;
+    height: 100px;
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Gold_square.svg/1024px-Gold_square.svg.png);
     background-color: gold;
     border-radius: 20px;
     justify-content: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     color: black;
 }
@@ -156,11 +161,23 @@ input[type='submit']{
     display: flex;
     grid-area: desc;
     padding: 10px;
+    font-size: 20px;
 }
 
 #moregames {
     display: flex;
     grid-area: btn;
+    background-color: rgb(0,0,0,0.5);
+    color: rgb(9, 199, 199);
+    padding: 20px;
+    border: solid rgb(9, 199, 199);
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#similar html {
+    color: red;
 }
 
 #similar {
@@ -173,6 +190,16 @@ input[type='submit']{
     color: white;
     grid-area: ul;
     padding: 0;
+
+}
+
+.meta2 {
+    /* display: flex;
+    align-items: center; */
+    grid-area: meta2;
+    text-align: center;
+    color: rgb(218, 40, 40);
+    font-weight: bold;
 }
 
 
@@ -193,6 +220,7 @@ input[type='submit']{
         "head1 head2 head3"
         "title date meta"
         "desc desc desc"
+        "meta2 meta2 meta2"
         "btn btn btn"
         "ul ul ul";
         font-family: 'Courier New', Courier, monospace;
@@ -216,6 +244,7 @@ input[type='submit']{
         "head1 head2 head3"
         "title date meta"
         "desc desc desc"
+        "meta2 meta2 meta2"
         "btn btn btn"
         "ul ul ul";
         font-family: 'Courier New', Courier, monospace;
