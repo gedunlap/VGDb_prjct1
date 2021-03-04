@@ -48,7 +48,7 @@ $('button').on('click', handleGetData2);
 
 function handleGetData2(event) {
     $('#similar').empty();
-    $('#similar').html('Click title to see info');
+    $('#similar').html('Click title below to see info.');
     event.preventDefault();
 
     $.ajax({

@@ -162,6 +162,8 @@ input[type='submit']{
     grid-area: desc;
     padding: 10px;
     font-size: 20px;
+    background-color: rgb(0,0,0,0.5);
+    border-radius: 30px;
 }
 
 #moregames {
@@ -176,21 +178,22 @@ input[type='submit']{
     text-decoration: underline;
 }
 
-#similar html {
-    color: red;
-}
-
-#similar {
+html #similar {
     text-align: center;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     height: 200px;
     width: 100%;
-    color: white;
+    color: red;
     grid-area: ul;
     padding: 0;
+    font-size: 25px;
+}
 
+#similar li {
+    color: white;
+    font-size: 20px;
 }
 
 .meta2 {
