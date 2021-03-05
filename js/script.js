@@ -1,5 +1,3 @@
-
-
 const $title = $('.title')
 const $desc = $('.desc')
 const $date = $('.date')
