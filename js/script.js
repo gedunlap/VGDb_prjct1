@@ -103,22 +103,3 @@ $("#similar").on('click','li',function (){
         }
     );
 });
-
-
-// function redirect() {
-//     if(gameData.redirect == true){
-//         userInput == gameData.slug;
-//         $.ajax({
-//             url:'https://api.rawg.io/api/games/' + userInput + '/suggested?page_size=5'
-//         }).then(
-//             (data) =>{
-//                 newGameData = data;
-//                 console.log(data);
-//                 render2();
-//             },
-//             (error) => {
-//                 console.log('WHOOPS: ', error)
-//             }
-//         );
-//     }
-// }
